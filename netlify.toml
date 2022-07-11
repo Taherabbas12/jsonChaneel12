@@ -1,0 +1,13 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/"
+  channels.json = "/api.json"
+  status = 302
+
+  [[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
